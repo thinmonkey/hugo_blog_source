@@ -27,8 +27,3 @@ after_script:
     - git add .
     - git commit -m 'Travis upate blog'
     - git push --force --quiet "https://${GITHUB_TOKEN}@${GITHUB_REP}" master:master
-
-#指定分支，只有指定的分支提交时才会运行脚本
-branches:
-  only:
-    - ${SOURCE}
