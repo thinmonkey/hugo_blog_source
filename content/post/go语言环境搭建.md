@@ -46,9 +46,7 @@ keywords:
     	set CGO_FFLAGS=-g -O2
     	set CGO_LDFLAGS=-g -O2
     	set PKG_CONFIG=pkg-config
-    	set GOGCCFLAGS=-m64 -mthreads -fno-caret-diagnostics -Qunused-arguments -fmessag
-    	e-length=0 -fdebug-prefix-map=C:\Users\asus\AppData\Local\Temp\go-build936714174
-    	=/tmp/go-build -gno-record-gcc-switches
+    	set GOGCCFLAGS=-m64 -mthreads -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0-fdebug-prefix-map=C:\Users\asus\AppData\Local\Temp\go-build936714174=/tmp/go-build -gno-record-gcc-switches
 ### 这里解释一下Go env里面比较重要的几个概念：
   1. GOROOT：GOROOT是go的安装目录，该目录只有一个，这个目录里面包含Go本身提供的官方开发开发库和编译环境以及内置的工具。
   2. GOPATH：GOPATH是go项目的工作目录。go语言开发的一大特点就是遵循统一的配置，简化开发流程。**go1.11**版本之前，通常情况下项目的源码和第三方库只能放在GOPATH目录下编译和运行，目前最新的**go1.11**版本为了解决项目自由存放的问题，添加了go module子模块功能，可以把项目源码放在任何目录，运行go build,go run等命令时会去自动找相关依赖库完成编译和运行。GOPATH可以有多个，但是每个GOPATH目录下规定有三个子目录：src，bin，pkg。
